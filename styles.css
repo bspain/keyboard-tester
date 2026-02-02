@@ -1,0 +1,136 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  color-scheme: light;
+  --bg: #ffffff;
+  --text: #1f2937;
+  --key-bg: #f8fafc;
+  --key-border: #d1d5db;
+  --key-active: #bbf7d0;
+  --key-active-border: #22c55e;
+}
+
+body {
+  margin: 0;
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--bg);
+  color: var(--text);
+}
+
+.app {
+  padding: 20px 24px 28px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.log-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.key-log {
+  flex: 1;
+  padding: 10px 12px;
+  border: 1px solid var(--key-border);
+  border-radius: 8px;
+  font-size: 14px;
+  resize: none;
+  background: #fff;
+}
+
+.btn {
+  padding: 8px 14px;
+  border-radius: 8px;
+  border: 1px solid var(--key-border);
+  background: #fff;
+  cursor: pointer;
+}
+
+.keyboard {
+  display: flex;
+  gap: 24px;
+  align-items: flex-start;
+}
+
+.block {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.row {
+  display: flex;
+  gap: 6px;
+  align-items: center;
+}
+
+.key {
+  min-width: 40px;
+  height: 38px;
+  padding: 0 8px;
+  border-radius: 6px;
+  border: 1px solid var(--key-border);
+  background: var(--key-bg);
+  font-size: 12px;
+  color: var(--text);
+}
+
+.key.active {
+  background: var(--key-active);
+  border-color: var(--key-active-border);
+  box-shadow: 0 0 0 1px var(--key-active-border);
+}
+
+.key.w-2 {
+  min-width: 76px;
+}
+
+.key.space {
+  min-width: 240px;
+}
+
+.spacer {
+  width: 10px;
+}
+
+.nav-block .row {
+  justify-content: flex-start;
+}
+
+.arrows {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.arrow-row {
+  display: flex;
+  gap: 6px;
+}
+
+.numpad-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 44px);
+  grid-auto-rows: 38px;
+  gap: 6px;
+}
+
+.numpad-grid .key {
+  width: 44px;
+}
+
+.numpad-grid .key.wide {
+  grid-column: span 2;
+  width: 94px;
+}
+
+.numpad-grid .key.tall {
+  grid-row: span 2;
+  height: 82px;
+}
