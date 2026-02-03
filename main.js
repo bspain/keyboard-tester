@@ -1,4 +1,4 @@
-const { app, BrowserWindow } = require("electron");
+const { app, BrowserWindow, Menu } = require("electron");
 const path = require("path");
 
 const createWindow = () => {
@@ -14,10 +14,12 @@ const createWindow = () => {
     }
   });
 
+  win.setMenuBarVisibility(false);
   win.loadFile(path.join(__dirname, "index.html"));
 };
 
 app.whenReady().then(() => {
+  Menu.setApplicationMenu(null);
   createWindow();
 
   app.on("activate", () => {
