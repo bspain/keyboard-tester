@@ -3,8 +3,6 @@ const path = require("path");
 let mainWindow;
 
 const mediaShortcuts = [
-  { accelerator: "BrightnessDown", code: "BrightnessDown", label: "Bri-" },
-  { accelerator: "BrightnessUp", code: "BrightnessUp", label: "Bri+" },
   { accelerator: "VolumeMute", code: "MediaMute", label: "Mute" },
   { accelerator: "VolumeDown", code: "MediaVolumeDown", label: "Vol-" },
   { accelerator: "VolumeUp", code: "MediaVolumeUp", label: "Vol+" },
