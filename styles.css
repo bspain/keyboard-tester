@@ -68,6 +68,10 @@ body {
   align-items: center;
 }
 
+.media-row {
+  margin-bottom: 4px;
+}
+
 .key {
   min-width: 40px;
   height: 38px;
@@ -77,6 +81,10 @@ body {
   background: var(--key-bg);
   font-size: 12px;
   color: var(--text);
+}
+
+.key.media {
+  min-width: 56px;
 }
 
 .key.active {

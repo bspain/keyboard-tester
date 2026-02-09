@@ -1,6 +1,6 @@
 {
   "name": "keyboard-tester",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Minimal Electron keyboard tester",
   "main": "main.js",
   "author": "",
