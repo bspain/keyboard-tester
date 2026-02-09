@@ -3,12 +3,16 @@ const path = require("path");
 let mainWindow;
 
 const mediaShortcuts = [
+  { accelerator: "BrightnessDown", code: "BrightnessDown", label: "Bri-" },
+  { accelerator: "BrightnessUp", code: "BrightnessUp", label: "Bri+" },
   { accelerator: "VolumeMute", code: "MediaMute", label: "Mute" },
   { accelerator: "VolumeDown", code: "MediaVolumeDown", label: "Vol-" },
   { accelerator: "VolumeUp", code: "MediaVolumeUp", label: "Vol+" },
   { accelerator: "MediaPlayPause", code: "MediaPlayPause", label: "Play" },
   { accelerator: "MediaPreviousTrack", code: "MediaPreviousTrack", label: "Prev" },
-  { accelerator: "MediaNextTrack", code: "MediaNextTrack", label: "Next" }
+  { accelerator: "MediaNextTrack", code: "MediaNextTrack", label: "Next" },
+  { accelerator: "MediaRewind", code: "MediaRewind", label: "Rew" },
+  { accelerator: "MediaFastForward", code: "MediaFastForward", label: "FF" }
 ];
 
 const registerMediaShortcuts = (win) => {

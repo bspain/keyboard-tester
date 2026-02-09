@@ -5,12 +5,16 @@ const keyMap = new Map(keys.map((key) => [key.dataset.code, key]));
 const activeTimers = new Map();
 
 const mediaKeyLookup = new Map([
+  ["BrightnessUp", { code: "BrightnessUp", label: "Bri+" }],
+  ["BrightnessDown", { code: "BrightnessDown", label: "Bri-" }],
   ["AudioVolumeUp", { code: "MediaVolumeUp", label: "Vol+" }],
   ["AudioVolumeDown", { code: "MediaVolumeDown", label: "Vol-" }],
   ["AudioVolumeMute", { code: "MediaMute", label: "Mute" }],
   ["MediaTrackNext", { code: "MediaNextTrack", label: "Next" }],
   ["MediaTrackPrevious", { code: "MediaPreviousTrack", label: "Prev" }],
-  ["MediaPlayPause", { code: "MediaPlayPause", label: "Play" }]
+  ["MediaPlayPause", { code: "MediaPlayPause", label: "Play" }],
+  ["MediaRewind", { code: "MediaRewind", label: "Rew" }],
+  ["MediaFastForward", { code: "MediaFastForward", label: "FF" }]
 ]);
 
 const resolveMediaKey = (event) => {
